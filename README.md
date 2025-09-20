@@ -42,3 +42,8 @@ Attach using
 ```shell
 docker logs --follow request-logger
 ```
+
+# Webhooks
+
+To test webhooks by using this server as the target to receive the requests, just forward the port of the machine this container/app runs on.
+For security reasons, only enable the port forwarding rule while needed, else the server may get spammed.
