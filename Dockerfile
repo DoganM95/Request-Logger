@@ -1,6 +1,8 @@
 # Dockerfile
 FROM node:current-alpine
 WORKDIR /app
-RUN npm install express body-parser
-COPY server.js .
-CMD ["node", "server.js"]
+COPY package*.json ./
+RUN npm install --production
+COPY index.js ./
+EXPOSE 3000
+CMD ["node", "index.js"]
